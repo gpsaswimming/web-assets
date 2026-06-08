@@ -1,0 +1,4 @@
+{
+  "registration_open": false,
+  "_comment": "Flip registration_open to true when GPSA clinic registration opens, false when it closes. Drives the clinic button in the GPSA site sidebar. See /clinic section of the repo README."
+}

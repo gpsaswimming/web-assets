@@ -34,13 +34,64 @@ only shows the button when `registration_open` is `true`:
 
 ```html
 <!-- GPSA Clinic Registration — Sidebar Widget -->
-<div id="clinic-btn" style="display:none; text-align:center; margin: 12px 0;">
-  <h2 style="color:#dc001e; background:white; margin-bottom:8px;">Swim Clinic Registration Open!</h2>
-  <a href="https://clinic.gpsaswimming.org/register"
-     style="background:#dc001e; color:white; padding:10px 16px; border-radius:4px;
-            text-decoration:none; font-weight:bold; display:inline-block;">
-    Register Now
-  </a>
+<style>
+  .gpsa-clinic-cta {
+    text-align: center !important;
+    padding: 0 !important;
+    /* Pulls the content up to eliminate the CMS's hidden top title space */
+    margin: -20px 0 0 0 !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  }
+  .gpsa-clinic-cta .clinic-title {
+    color: #D10A14 !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    line-height: 1.3 !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  .gpsa-clinic-cta .clinic-subtext {
+    color: #333333 !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 12px 0 !important;
+  }
+  .gpsa-clinic-cta .clinic-date {
+    font-weight: bold !important;
+  }
+  .gpsa-clinic-cta .clinic-btn {
+    display: inline-block !important;
+    background-color: #D10A14 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 15px !important;
+    padding: 10px 24px !important;
+    border-radius: 4px !important;
+    transition: background-color 0.15s ease-in-out !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    width: 85% !important;
+    max-width: 260px !important;
+    box-sizing: border-box !important;
+  }
+  .gpsa-clinic-cta .clinic-btn:hover {
+    background-color: #A80810 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+</style>
+<div class="gpsa-clinic-cta" id="clinic-btn" style="display:none;">
+    <div class="clinic-title">
+        Improve Your Technique This Summer!
+    </div>
+    <p class="clinic-subtext">
+        J. Kyle Hurdle Swim Clinic<br>
+        <span class="clinic-date">June 6th – June 7th</span>
+    </p>
+    <p>
+        <a href="https://clinic.gpsaswimming.org" class="clinic-btn" target="_blank" rel="noopener">Register Now</a>
+    </p>
 </div>
 <script>
   fetch('https://assets.gpsaswimming.org/clinic/clinic-status.json')

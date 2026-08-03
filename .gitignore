@@ -7,3 +7,16 @@
 
 # Generated files — built at deploy time, never committed
 index.html
+
+# Raw meet files — these carry minors' birthdates and must never reach a public
+# repo. Portfolio-wide policy, applied to every public repo regardless of whether
+# it has any reason to hold one: the repos nobody expects to receive a meet file
+# are where a misdirected write would go unnoticed longest.
+*.sd3
+*.SD3
+*.hy3
+*.HY3
+*.cl2
+*.CL2
+*.zip
+*.ZIP
